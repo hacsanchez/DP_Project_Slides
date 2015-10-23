@@ -5,7 +5,7 @@ author      : Harold A. Cruz-Sanchez
 date        : October 2015
 logo        : hacs.png
 url     :
-    assets: ../DP_Project_slides/assets
+    assets: ../DP_Project_Slides/assets
 framework   : io2012      # {io2012, html5slides, shower, dzslides, revealjs  ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : default      # tomorrow
