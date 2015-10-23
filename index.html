@@ -1,293 +1,148 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Trigonometric Functions with **R**</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Trigonometric Functions with **R**">
-  <meta name="author" content="Harold A. Cruz-Sanchez">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
-<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
-<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
-<link rel=stylesheet href="libraries/widgets/nvd3/css/nv.d3.css"></link>
-<link rel=stylesheet href="libraries/widgets/nvd3/css/rNVD3.css"></link>
-<link rel=stylesheet href="./assets/css/ribbons.css"></link>
-<link rel=stylesheet href="./assets/css/workshop.css"></link>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dp project slides by hacsanchez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Dp project slides</h1>
+      <h2 class="project-tagline">Trigonometric Functions</h2>
+      <a href="https://github.com/hacsanchez/DP_Project_Slides" class="btn">View on GitHub</a>
+      <a href="https://github.com/hacsanchez/DP_Project_Slides/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/hacsanchez/DP_Project_Slides/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-  
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  <script src="libraries/widgets/nvd3/js/jquery-1.8.2.min.js"></script>
-<script src="libraries/widgets/nvd3/js/d3.v3.min.js"></script>
-<script src="libraries/widgets/nvd3/js/nv.d3.min-new.js"></script>
-<script src="libraries/widgets/nvd3/js/fisheye.js"></script>
+    <section class="main-content">
+      <h3>
+<a id="trigonometric-function-app" class="anchor" href="#trigonometric-function-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trigonometric Function App</h3>
 
+<p>There is a permanent need to understand the behavior of periodic phenomena using visualization.  Mathematical models can be use to model such behaviors, and now we can use <strong>R</strong> and <strong>Shiny</strong> to implement a wonderful application that allows us to make interactive changes in the models.</p>
 
-</head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-        <slide class="title-slide segue nobackground">
-  <aside class="gdbar">
-    <img src="../DP_Project_slides/assets/img/hacs.png">
-  </aside>
-  <hgroup class="auto-fadein">
-    <h1>Trigonometric Functions with **R**</h1>
-    <h2>Shiny + Slidify</h2>
-    <p>Harold A. Cruz-Sanchez<br/></p>
-  </hgroup>
-  <article></article>  
-</slide>
-    
-
-    <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>Trigonometric Function App</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>There is a permanent need to understand the behavior of periodic phenomena using visualization.  Mathematical models can be use to model such behaviors, and now we can use <strong>R</strong> and <strong>Shiny</strong> to implement a wonderful application that allows us to make interactive changes in the models.</p>
-
-<p>Here I will focus on the function \( A*\sin(B*\theta)^C\), but the developed app has the capability to calculate and visualize  \( A*\cos(B*\theta)^C\), and \( A*\tan(B*\theta)^C\) as well.</p>
+<p>Here I will focus on the function $latex A<em>\sin(B</em>\theta)^C$, but the developed app has the capability to calculate and visualize  $latex A<em>\cos(B</em>\theta)^C$, and $latex A<em>\tan(B</em>\theta)^C$ as well.</p>
 
 <p><em>A</em>, <em>B</em>, and <em>C</em> are interactive parameters.</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h3>
+<a id="about-the-functions" class="anchor" href="#about-the-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>About the Functions</h3>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>About the Functions</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>In mathematics, the trigonometric functions are relate to the angles of a triangle and the lengths of its sides. They are important in the study of triangles and modeling periodic phenomena, among many other applications in navigation, engineering, and physics.</p>
+<p>In mathematics, the trigonometric functions are relate to the angles of a triangle and the lengths of its sides. They are important in the study of triangles and modeling periodic phenomena, among many other applications in navigation, engineering, and physics.</p>
 
 <p>The most familiar trigonometric functions are the:</p>
 
 <ol>
-<li><em>Sine</em> </li>
-<li><em>Cosine</em> </li>
+<li>
+<em>Sine</em> </li>
+<li>
+<em>Cosine</em> </li>
 <li><em>Tangent</em></li>
 </ol>
 
 <p>The sine and cosine functions are also commonly used to model periodic
 function phenomena such as sound and light waves.</p>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h3>
+<a id="the-shiny-app" class="anchor" href="#the-shiny-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Shiny app</h3>
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>The Shiny app</h2>
-  </hgroup>
-  <article data-timings="">
-    
-<div style='float:left;width:48%;' class='centered'>
-  <p>Run the app, you will find the interactive panel</p>
+<p>Run the app, you will find the interactive panel</p>
 
-<div style='text-align: center;'>
-    <img height="300" width="320" src='trigo_app_11.png' />
+<div>
+    <img height="300" width="320" src="trigo_app_11.png">
 </div>
 
 <p>and the tabs</p>
 
-<div style='text-align: center;'>
-    <img height="400" width="320" src='trigo_app_20.png' />
-</div>
-
-</div>
-<div style='float:right;width:48%;'>
-  <p>Now you can change some of the values, just sliding the pointer and observe the result on the selected tab</p>
-
-<div style='text-align: center;'>
-    <img height="600" width="480" src='trigo_app_30.png' />
-</div>
-
-</div>
 <div>
-  
+    <img height="400" width="320" src="trigo_app_20.png">
 </div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>The Shiny app [Cont.]</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Here a different tab, using the same parameters</p>
+<h3>
+<a id="the-shiny-app-cont" class="anchor" href="#the-shiny-app-cont" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Shiny app [Cont.]</h3>
 
-<div style='text-align: center;'>
-    <img height="665" width="595" src='trigo_app_40.png' /> 
+<p>Now you can change some of the values, just sliding the pointer and observe the result on the selected tab</p>
+
+<div>
+    <img height="600" width="480" src="trigo_app_30.png">
+</div>
+
+<h3>
+<a id="the-shiny-app-cont-1" class="anchor" href="#the-shiny-app-cont-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Shiny app [Cont.]</h3>
+
+<p>Here a different tab, using the same parameters</p>
+
+<div>
+    <img height="665" width="595" src="trigo_app_40.png"> 
   </div>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h3>
+<a id="function-sine" class="anchor" href="#function-sine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Function Sine</h3>
 
-<slide class="" id="slide-5" style="background:;">
-  <hgroup>
-    <h2>Function Sine</h2>
-  </hgroup>
-  <article data-timings="">
-    
-<div style='float:left;width:48%;' class='centered'>
-  <p>The sine of an angle is the ratio of the length of the opposite side to the length of the hypotenuse. Given a unit circle, it is the side of the triangle on which the angle opens. In our case:</p>
+<p>The sine of an angle is the ratio of the length of the opposite side to the length of the hypotenuse. Given a unit circle, it is the side of the triangle on which the angle opens. In our case:</p>
 
-<p>\[
-\frac{A*sin(B*\theta)^D}{C} = \frac{opposite}{hypotenuse} 
-\]</p>
+<p>$$latex
+\frac{A<em>sin(B</em>\theta)^D}{C} = \frac{opposite}{hypotenuse} 
+$$</p>
 
-</div>
-<div style='float:right;width:48%;'>
-  <p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<div class="highlight highlight-source-r"><pre>require(<span class="pl-smi">ggplot2</span>)
+<span class="pl-smi">sin1</span> <span class="pl-k">&lt;-</span> ggplot(<span class="pl-k">data.frame</span>(<span class="pl-v">x</span> <span class="pl-k">=</span> c(<span class="pl-c1">0</span>, <span class="pl-c1">4</span><span class="pl-k">*</span><span class="pl-c1">pi</span>)), aes(<span class="pl-smi">x</span>))
+<span class="pl-smi">sin1</span> <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">sin</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>)
+</pre></div>
 
-</div>
-<div>
-  
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h3>
+<a id="plot-of-function-sinx" class="anchor" href="#plot-of-function-sinx" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plot of Function Sin(x)</h3>
 
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>Plot of Function Sin(x)</h2>
-  </hgroup>
-  <article data-timings="">
-    
-<div style='float:left;width:48%;' class='centered'>
-  <p>Each change in the parameters of the function
-\( A*\sin(B*\theta)^C \) will create a new plot.  </p>
+<p>*** =left
+Each change in the parameters of the function
+$latex A<em>\sin(B</em>\theta)^C $ will create a new plot.  </p>
 
 <ol>
-<li><p>Black  : \( \sin(\theta)\)</p></li>
-<li><p>Yellow : \( 2*\sin(\theta)\)</p></li>
-<li><p>Blue   : \( \sin(2*\theta)\)</p></li>
-<li><p>Green  : \( \sin(\theta)^2\)</p></li>
-<li><p>Red    : \( 2*\sin(2*\theta)^2\)</p></li>
+<li><p>Black  : $latex \sin(\theta)$</p></li>
+<li><p>Yellow : $latex 2*\sin(\theta)$</p></li>
+<li><p>Blue   : $latex \sin(2*\theta)$</p></li>
+<li><p>Green  : $latex \sin(\theta)^2$</p></li>
+<li><p>Red    : $latex 2<em>\sin(2</em>\theta)^2$
+*** =right</p></li>
 </ol>
 
-</div>
-<div style='float:right;width:48%;'>
-  <p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+<div class="highlight highlight-source-r"><pre><span class="pl-smi">x</span> <span class="pl-k">&lt;-</span> seq(<span class="pl-c1">0</span>, <span class="pl-c1">2</span> <span class="pl-k">*</span> <span class="pl-c1">pi</span>, <span class="pl-c1">0.01</span>)
+<span class="pl-en">y1</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){sin(<span class="pl-smi">x</span>)}
+<span class="pl-en">y2</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){<span class="pl-c1">2</span><span class="pl-k">*</span>sin(<span class="pl-smi">x</span>)}
+<span class="pl-en">y3</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){sin(<span class="pl-c1">2</span><span class="pl-k">*</span><span class="pl-smi">x</span>)}
+<span class="pl-en">y4</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){sin(<span class="pl-smi">x</span>)<span class="pl-k">^</span><span class="pl-c1">2</span>}
+<span class="pl-en">y5</span> <span class="pl-k">&lt;-</span> <span class="pl-k">function</span>(<span class="pl-smi">x</span>){<span class="pl-c1">2</span><span class="pl-k">*</span>sin(<span class="pl-c1">2</span><span class="pl-k">*</span><span class="pl-smi">x</span>)<span class="pl-k">^</span><span class="pl-c1">2</span>}
+<span class="pl-smi">f1</span> <span class="pl-k">&lt;-</span> ggplot(<span class="pl-k">data.frame</span>(<span class="pl-v">x</span> <span class="pl-k">=</span> c(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>)), aes(<span class="pl-smi">x</span>))
+<span class="pl-smi">f1</span> <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y1</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y2</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>yellow<span class="pl-pds">"</span></span>)<span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y3</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y4</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>green<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y5</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>)</pre></div>
 
 <p>The result of changing all the parameters, this example
-\[
-2*\sin(2*\theta)^2
-\]</p>
+$$latex
+2<em>\sin(2</em>\theta)^2
+$$</p>
 
 <p>is shown in <strong>RED</strong></p>
 
-</div>
-<div>
-  
-</div>
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Trigonometric Function App'>
-         1
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='About the Functions'>
-         2
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='The Shiny app'>
-         3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='The Shiny app [Cont.]'>
-         4
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Function Sine'>
-         5
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='Plot of Function Sin(x)'>
-         6
-      </a>
-    </li>
-  </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
-</body>
-  <!-- Load Javascripts for Widgets -->
-  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
-<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
-<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
-<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
-<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
-<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
-<script src="libraries/widgets/interactive/js/interactive.js"></script>
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
 
-  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        processEscapes: true
-      }
-    });
-  </script>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script> -->
-  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
-</script>
-<script>  
-  $(function (){ 
-    $("#example").popover(); 
-    $("[rel='tooltip']").tooltip(); 
-  });  
-  </script>  
-  <script src="shared/shiny.js" type="text/javascript"></script>
-  <script src="shared/slider/js/jquery.slider.min.js"></script>
-  <script src="shared/bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="shared/slider/css/jquery.slider.min.css"></link>
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/hacsanchez/DP_Project_Slides">Dp project slides</a> is maintained by <a href="https://github.com/hacsanchez">hacsanchez</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
   
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+  </body>
+</html>
