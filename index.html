@@ -90,11 +90,12 @@ $$</p>
 <span class="pl-smi">sin1</span> <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">sin</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>)
 </pre></div>
 
+<p><img src="https://raw.githubusercontent.com/hacsanchez/DP_Project_Slides/master/assets/fig/unnamed-chunk-1-1.png" alt="sin(x)"></p>
+
 <h3>
 <a id="plot-of-function-sinx" class="anchor" href="#plot-of-function-sinx" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plot of Function Sin(x)</h3>
 
-<p>*** =left
-Each change in the parameters of the function
+<p>Each change in the parameters of the function
 $latex A<em>\sin(B</em>\theta)^C $ will create a new plot.  </p>
 
 <ol>
@@ -102,8 +103,7 @@ $latex A<em>\sin(B</em>\theta)^C $ will create a new plot.  </p>
 <li><p>Yellow : $latex 2*\sin(\theta)$</p></li>
 <li><p>Blue   : $latex \sin(2*\theta)$</p></li>
 <li><p>Green  : $latex \sin(\theta)^2$</p></li>
-<li><p>Red    : $latex 2<em>\sin(2</em>\theta)^2$
-*** =right</p></li>
+<li><p>Red    : $latex 2<em>\sin(2</em>\theta)^2$</p></li>
 </ol>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-smi">x</span> <span class="pl-k">&lt;-</span> seq(<span class="pl-c1">0</span>, <span class="pl-c1">2</span> <span class="pl-k">*</span> <span class="pl-c1">pi</span>, <span class="pl-c1">0.01</span>)
@@ -115,7 +115,8 @@ $latex A<em>\sin(B</em>\theta)^C $ will create a new plot.  </p>
 <span class="pl-smi">f1</span> <span class="pl-k">&lt;-</span> ggplot(<span class="pl-k">data.frame</span>(<span class="pl-v">x</span> <span class="pl-k">=</span> c(<span class="pl-c1">0</span>, <span class="pl-c1">10</span>)), aes(<span class="pl-smi">x</span>))
 <span class="pl-smi">f1</span> <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y1</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y2</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>yellow<span class="pl-pds">"</span></span>)<span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y3</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y4</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>green<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> stat_function(<span class="pl-v">fun</span> <span class="pl-k">=</span> <span class="pl-smi">y5</span>, <span class="pl-v">colour</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span>)</pre></div>
 
-<p>The result of changing all the parameters, this example
+<p><img src="https://raw.githubusercontent.com/hacsanchez/DP_Project_Slides/master/assets/fig/unnamed-chunk-2-1.png" alt="2*sin(2*x)^2">
+The result of changing all the parameters, this example
 $$latex
 2<em>\sin(2</em>\theta)^2
 $$</p>
